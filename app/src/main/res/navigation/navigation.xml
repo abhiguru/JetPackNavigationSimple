@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/enterDetailsFragment">
+
+    <fragment
+        android:id="@+id/enterDetailsFragment"
+        android:name="in.tutorial.jetpacknavigationsimple.EnterDetailsFragment"
+        android:label="EnterDetailsFragment" >
+        <action
+            android:id="@+id/action_enterDetailsFragment_to_verifyDetailsFragment"
+            app:destination="@id/verifyDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyDetailsFragment"
+        android:name="in.tutorial.jetpacknavigationsimple.VerifyDetailsFragment"
+        android:label="fragment_verify_details"
+        tools:layout="@layout/fragment_verify_details" >
+        <argument android:name="name"
+            app:argType="string"
+            android:defaultValue='""'/>
+        <argument android:name="mobile"
+            app:argType="long"
+            android:defaultValue="0L"/>
+    </fragment>
+</navigation>
